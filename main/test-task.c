@@ -25,7 +25,7 @@ void taskSend(void *param)
             if (xQueueSendToBack(Queue1, &dd, pdMS_TO_TICKS(10)))
             {
                 ESP_LOGI("Send", "%d", dd.data++);
-                vTaskDelay(pdMS_TO_TICKS(1000));
+                vTaskDelay(pdMS_TO_TICKS(300));
             }
             else
             {
